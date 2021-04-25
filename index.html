@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="tree.css" />
+    <style>
+        .btn{
+            min-width: 130px;
+        }
+    </style>
+    <title>Laundry</title>
+</head>
+
+<body>
+    <div class="container pt-4">
+        <div class="row">
+            <p class="h1">Coding Tasks</p>
+        </div>
+        <div class="row pb-2">
+            <button id="btn_do_laundry" class="btn">1. Do Laundry</button>
+        </div>
+        <div id="div_laundry" class="row pb-2 d-none">
+            <span>Check the console for output</span>
+        </div>
+        <div class="row pb-2">
+            <button id="btn_prank" class="btn">2. Prank Tony</button>
+        </div>
+        <div id="div_prank" class="row pb-2 d-none">
+            <span>Check the client side code here: <a href="#"></a>></span>
+        </div>
+        <div class="row pb-2">
+            <button id="btn_build_tree" class="btn">3. Build Tree</button>
+        </div>
+        <div class="row pb-2">
+            <div id="tf-tree">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <script src="laundry.js"></script>
+    <script src="prank.js"></script>
+    <script src="nodes.js"></script>
+</body>
+
+</html>
