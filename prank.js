@@ -52,6 +52,9 @@ function PrankCoworker(){
     };
 };
 
+/**
+ * Called once the document is loaded.
+ */
 $(() => {
     new PrankCoworker().bindEvents();
 });

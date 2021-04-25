@@ -94,6 +94,12 @@ function TreeBuilder() {
         return node;
     };
 
+    /**
+     * Generates a DOM model for the Tree.
+     * 
+     * @param {Node} tree 
+     * @returns {string} - DOM string of the tree.
+     */
     function printTree(tree){
         let treeDOM = '';
         if(tree.hasChildren){
