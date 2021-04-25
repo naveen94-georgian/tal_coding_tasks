@@ -49,14 +49,6 @@ class Node {
  * TreeBuilder functions builds a tree from an input array.
  */
 function TreeBuilder() {
-    /**
-     * The function bindEvents binds the events triggered in the view.
-     */
-    TreeBuilder.prototype.bindEvents = () => {
-        $('#btn_build_tree').on('click', () => {
-            onBuildTreeClicked();
-        });
-    };
 
     /**
      * The onBuildTreeClicked function triggered when the Build Tree button is clicked. 
@@ -71,7 +63,6 @@ function TreeBuilder() {
         let treeDOM = printTree(tree);
         $('#tf-tree').children().remove();
         $('#tf-tree').append('<ul class="tree">'+treeDOM+'</ul>');
-        console.log('<ul class="tree">' + treeDOM + '</ul>')
         return tree;
     };
 
@@ -112,6 +103,16 @@ function TreeBuilder() {
             treeDOM += `<li><span>${tree.value}</span></li>`;
         }
         return treeDOM;
+    };
+
+    /**
+     * The function bindEvents binds the events triggered in the view.
+     */
+    TreeBuilder.prototype.bindEvents = () => {
+        $('#btn_build_tree').on('click', () => {
+            $('#div_tree').removeClass('d-none');
+            onBuildTreeClicked();
+        });
     };
 };
 

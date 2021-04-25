@@ -3,15 +3,6 @@
  * The function LaundryMachine is used to do Laundry.
  */
 function LaundryMachine() {
-    /**
-     * The function bindEvents binds the events triggered in the view.
-     */
-    LaundryMachine.prototype.bindEvents = () => {
-        $('#btn_do_laundry').on('click', () => {
-            $('#div_laundry').removeClass('d-none');
-            doLaundry();
-        });
-    };
 
     /**
      * The doLaundry method is used to perform laundry operations wash, dry and fold.
@@ -57,6 +48,16 @@ function LaundryMachine() {
             console.log('fold');
             callback();
         }, 1000);
+    };
+
+    /**
+     * The function bindEvents binds the events triggered in the view.
+     */
+    LaundryMachine.prototype.bindEvents = () => {
+        $('#btn_do_laundry').on('click', () => {
+            $('#div_laundry').removeClass('d-none');
+            doLaundry();
+        });
     };
 };
 
