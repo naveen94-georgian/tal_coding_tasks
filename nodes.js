@@ -58,7 +58,8 @@ function TreeBuilder() {
     function onBuildTreeClicked(){
         let node = new Node(1);
         // let edgeList = [[4, 5], [5, 3], [1, 5], [2, 1]];
-        let edgeList = [[4, 5], [5, 3], [1, 5], [2, 5]];
+        //let edgeList = [[4, 5], [5, 3], [1, 5], [2, 5]];
+        let edgeList = [[4, 5], [5, 3], [1, 5], [2, 5], [6, 2], [2, 7], [3, 8], [9, 3],[3,10]];
         let tree = buildTree(node, edgeList);
         let treeDOM = printTree(tree);
         $('#tf-tree').children().remove();
