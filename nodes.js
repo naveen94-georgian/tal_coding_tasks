@@ -30,7 +30,7 @@ class Node {
 
     /**
      * Returns True if a tree node has children.
-     * @return {boolean}
+     * @return {boolean} - True if a node has children
      */
     get hasChildren(){
         return this._children.length > 0;
@@ -38,7 +38,7 @@ class Node {
 
     /**
      * Adds a child node to tree node.
-     * @param {Node} node 
+     * @param {Node} node - child node
      */
     addChild(node) {
         this._children.push(node);
@@ -74,6 +74,7 @@ function TreeBuilder() {
      * @param {Node} node - Root node
      * @param {number[][]} edgeList - List of edges.
      * @returns {Node} - Root node of the built tree.
+     * @inner
      */
     function buildTree(node, edgeList) {
         let edges = edgeList.filter((item) => item.indexOf(node.value) >= 0);
@@ -91,6 +92,7 @@ function TreeBuilder() {
      * 
      * @param {Node} tree 
      * @returns {string} - DOM string of the tree.
+     * @inner
      */
     function printTree(tree){
         let treeDOM = '';
